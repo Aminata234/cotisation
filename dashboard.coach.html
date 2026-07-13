@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervision Coach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Cotisations ODC - Supervision</div>
+        <div class="user">Coach WANE | <a href="index.html" style="color: #dc2626;">Déconnexion</a></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Tableau de Bord Global</h1>
+            <p>Mode lecture seule - Audit financier</p>
+        </div>
+
+        <div class="grid grid-5">
+            <div class="card kpi kpi-green">
+                <p class="kpi-label">Recouvrement Global</p>
+                <p class="kpi-value">20%</p>
+            </div>
+            <div class="card kpi kpi-blue">
+                <p class="kpi-label">Hebdo Collecté</p>
+                <p class="kpi-value">5M</p>
+            </div>
+            <div class="card kpi kpi-orange">
+                <p class="kpi-label">Ponctuel</p>
+                <p class="kpi-value">145K</p>
+            </div>
+            <div class="card kpi kpi-red">
+                <p class="kpi-label">En retard</p>
+                <p class="kpi-value">89K</p>
+            </div>
+            <div class="card kpi kpi-purple">
+                <p class="kpi-label">Actifs</p>
+                <p class="kpi-value">45/50</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Journal d'audit - Dernières opérations</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date/Heure</th>
+                            <th>Apprenant</th>
+                            <th>Type</th>
+                            <th>Montant</th>
+                            <th>Saisi par</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13/07 10:23</td>
+                            <td>Awa Diop</td>
+                            <td>Hebdo S8-S12</td>
+                            <td style="color: #16a34a; font-weight: 700;">+5000 FCFA</td>
+                            <td>Gérant: Fatou</td>
+                        </tr>
+                        <tr>
+                            <td>12/07 16:45</td>
+                            <td>Moussa Fall</td>
+                            <td>Décès</td>
+                            <td style="color: #16a34a; font-weight: 700;">+2000 FCFA</td>
+                            <td>Gérant: Fatou</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-secondary" style="margin-top: 16px;">Exporter CSV complet</button>
+        </div>
+    </div>
+</body>
+</html>

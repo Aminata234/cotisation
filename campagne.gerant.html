@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campagnes Ponctuelles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Cotisations ODC</div>
+        <div class="nav-links">
+            <a href="dashboard.gerant.html">Dashboard</a>
+            <a href="gestion.gerant.html">Apprenants</a>
+            <a href="paiement.gerant.html">Paiements</a>
+            <a href="campagne.gerant.html" class="active">Campagnes</a>
+        </div>
+        <div class="user">Mamadou Gérant</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Campagnes Ponctuelles</h1>
+            <p>Anniversaires, Décès, Autres événements</p>
+        </div>
+
+        <div class="grid-main">
+            <div class="card">
+                <h2>Créer une campagne</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Type d'événement</label>
+                        <select>
+                            <option>Anniversaire</option>
+                            <option>Décès / Cas social</option>
+                            <option>Matériel</option>
+                            <option>Sortie</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Nom de la campagne</label>
+                        <input type="text" placeholder="Anniversaires Octobre">
+                    </div>
+                    <div class="form-group">
+                        <label>Montant fixe par apprenant</label>
+                        <input type="number" placeholder="2000">
+                        <p class="form-hint">Laisser vide si montant libre (Décès)</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Date de fin</label>
+                        <input type="date">
+                        <p class="form-hint">Auto: 7 jours pour Décès, fin de mois pour Anniversaire</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Créer la campagne</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Campagnes actives</h2>
+                <div style="border: 1px solid #e5e7eb; padding: 16px; border-radius: 6px; margin-bottom: 12px;">
+                    <h3>Anniversaires Octobre</h3>
+                    <p style="font-size: 14px; color: #6b7280;">Montant: 2000 FCFA | Fin: 31/10</p>
+                    <p style="margin: 8px 0;">Payé: 45/50 apprenants</p>
+                    <div class="progress"><div class="progress-fill" style="width: 78%"></div></div>
+                </div>
+                <div style="border: 1px solid #e5e7eb; padding: 16px; border-radius: 6px;">
+                    <h3>Décès - Soutien Famille X</h3>
+                    <p style="font-size: 14px; color: #6b7280;">Montant libre | Fin: 15/07</p>
+                    <p style="margin: 8px 0;">Collecté: 12 500 FCFA - 8 contributeurs</p>
+                    <button class="btn btn-danger" style="font-size: 12px; padding: 6px 12px;">Clôturer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

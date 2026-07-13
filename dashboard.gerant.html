@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gérant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Cotisations ODC</div>
+        <div class="nav-links">
+            <a href="dashboard.gerant.html" class="active">Dashboard</a>
+            <a href="gestion.gerant.html">Apprenants</a>
+            <a href="paiement.gerant.html">Paiements</a>
+            <a href="campagne.gerant.html">Campagnes</a>
+        </div>
+        <div class="user">Mamadou Gérant | <a href="index.html" style="color: #dc2626;">Déconnexion</a></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Dashboard Gérant</h1>
+            <p>Semaine 12/40 - Date limite: Samedi 00h00</p>
+        </div>
+
+        <div class="grid grid-4">
+            <div class="card kpi kpi-green">
+                <p class="kpi-label">Total collecté</p>
+                <p class="kpi-value">248 000 FCFA</p>
+            </div>
+            <div class="card kpi kpi-blue">
+                <p class="kpi-label">Taux recouvrement S12</p>
+                <p class="kpi-value">76%</p>
+            </div>
+            <div class="card kpi kpi-red">
+                <p class="kpi-label">Apprenants en retard</p>
+                <p class="kpi-value">6</p>
+            </div>
+            <div class="card kpi kpi-orange">
+                <p class="kpi-label">Campagne Décès</p>
+                <p class="kpi-value">12 500 FCFA</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h2>Avancement Hebdomadaire</h2>
+                <div class="legend">
+                    <div class="legend-item"><div class="legend-box paye"></div>Payé</div>
+                    <div class="legend-item"><div class="legend-box retard"></div>Retard</div>
+                    <div class="legend-item"><div class="legend-box ouvert"></div>Ouvert</div>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Apprenant</th>
+                            <th>S9</th>
+                            <th>S10</th>
+                            <th>S11</th>
+                            <th class="current">S12</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Awa Diop</strong></td>
+                            <td><div class="cell paye"></div></td>
+                            <td><div class="cell paye"></div></td>
+                            <td><div class="cell paye"></div></td>
+                            <td><div class="cell paye"></div></td>
+                            <td><button class="btn-link">Détail</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moussa Fall</strong></td>
+                            <td><div class="cell paye"></div></td>
+                            <td><div class="cell paye"></div></td>
+                            <td><div class="cell retard"></div></td>
+                            <td><div class="cell ouvert"></div></td>
+                            <td><button class="btn-link-danger">Relancer</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

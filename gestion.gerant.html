@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Apprenants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Cotisations ODC</div>
+        <div class="nav-links">
+            <a href="dashboard.gerant.html">Dashboard</a>
+            <a href="gestion.gerant.html" class="active">Apprenants</a>
+            <a href="paiement.gerant.html">Paiements</a>
+            <a href="campagne.gerant.html">Campagnes</a>
+        </div>
+        <div class="user">Mamadou Gérant</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Gestion des Apprenants</h1>
+            <p>45 actifs / 5 inactifs</p>
+        </div>
+
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+                <h2>Liste des apprenants</h2>
+                <div>
+                    <button class="btn btn-primary">+ Ajouter manuel</button>
+                    <button class="btn btn-secondary">Import Excel/CSV</button>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Inscription</th>
+                            <th>Passif</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Awa Diop</strong></td>
+                            <td>awa@odc.sn</td>
+                            <td>01/07/2026</td>
+                            <td>0 FCFA</td>
+                            <td><span style="color: #16a34a;">Actif</span></td>
+                            <td><button class="btn-link">Modifier</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moussa Fall</strong></td>
+                            <td>moussa@odc.sn</td>
+                            <td>01/07/2026</td>
+                            <td>3000 FCFA</td>
+                            <td><span style="color: #16a34a;">Actif</span></td>
+                            <td><button class="btn-link">Modifier</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

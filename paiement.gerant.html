@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saisie Paiement - Gérant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">cotisations ODC</div>
+        <div class="nav-links">
+            <a href="dashboard.gerant.html">Dashboard</a>
+            <a href="gestion.gerant.html">Apprenants</a>
+            <a href="paiement.gerant.html" class="active">Paiements</a>
+            <a href="campagne.gerant.html">Campagnes</a>
+        </div>
+        <div class="user">Mamadou Gérant</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Enregistrer un paiement</h1>
+            <p>Saisie manuelle déclarative</p>
+        </div>
+
+        <div class="grid-main">
+            <div class="card">
+                <h2>Formulaire de saisie</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Apprenant</label>
+                        <select>
+                            <option>Awa Diop</option>
+                            <option>Moussa Fall</option>
+                            <option>Binta Sow</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Type de cotisation</label>
+                        <select>
+                            <option value="Hebdo">Hebdomadaire - 1000 FCFA/sem</option>
+                            <option value="Anniversaire">Anniversaire Octobre - 2000 FCFA</option>
+                            <option value="Deces">Décès - Montant libre</option>
+                            <option value="Passif">Reprise Passif</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Montant reçu (FCFA)</label>
+                        <input type="number" placeholder="5000">
+                        <p class="form-hint">Ventilation auto: 5 semaines seront couvertes</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Mode de paiement</label>
+                        <select>
+                            <option>Espèces</option>
+                            <option>Orange Money</option>
+                            <option>Wave</option>
+                            <option>Virement</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Note interne</label>
+                        <textarea rows="2" placeholder="Détails..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Valider le paiement</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Derniers paiements</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Apprenant</th>
+                            <th>Montant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13/07</td>
+                            <td>Awa Diop</td>
+                            <td style="color: #16a34a; font-weight: 700;">+5000</td>
+                        </tr>
+                        <tr>
+                            <td>12/07</td>
+                            <td>Moussa Fall</td>
+                            <td style="color: #16a34a; font-weight: 700;">+2000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
