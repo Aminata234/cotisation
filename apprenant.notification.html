@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Apprenant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Cotisations ODC</div>
+        <div class="nav-links">
+            <a href="dashboard.apprenant.html">Mon espace</a>
+            <a href="apprenant.historique.html">Historique</a>
+            <a href="apprenant.notification.html" class="active">Notifications (1)</a>
+        </div>
+        <div class="user">Awa Diop | <a href="index.html" style="color: #dc2626;">Déconnexion</a></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Notifications</h1>
+            <p>1 non lue</p>
+        </div>
+
+        <!-- Notification non lue -->
+        <div class="alert alert-info" style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+                <p class="alert-title">📢 Nouvelle campagne</p>
+                <p>Cotisation Anniversaires Octobre activée. Montant: 2000 FCFA</p>
+                <p style="font-size:12px;color:#6b7280;margin-top:4px">13/07/2026 18:30</p>
+            </div>
+            <button class="btn-link" style="white-space:nowrap">Marquer comme lu</button>
+        </div>
+
+        <!-- Notification lue -->
+        <div class="alert" style="display:flex;justify-content:space-between;align-items:start;background:#f9fafb;border-color:#e5e7eb">
+            <div>
+                <p class="alert-title">⚠️ Retard de paiement</p>
+                <p>Tu as 1 semaine de retard : S11. Régularise avant samedi 00h00.</p>
+                <p style="font-size:12px;color:#6b7280;margin-top:4px">10/07/2026 09:15</p>
+            </div>
+        </div>
+
+        <!-- Notification lue -->
+        <div class="alert" style="display:flex;justify-content:space-between;align-items:start;background:#f9fafb;border-color:#e5e7eb">
+            <div>
+                <p class="alert-title">🔔 Relance Gérant</p>
+                <p>Rappel : pense à régler ta cotisation hebdomadaire cette semaine.</p>
+                <p style="font-size:12px;color:#6b7280;margin-top:4px">05/07/2026 14:20</p>
+            </div>
+        </div>
+
+        <!-- Notification lue -->
+        <div class="alert" style="display:flex;justify-content:space-between;align-items:start;background:#f9fafb;border-color:#e5e7eb">
+            <div>
+                <p class="alert-title">✅ Paiement reçu</p>
+                <p>Ton paiement de 5000 FCFA pour S8-S12 a été enregistré.</p>
+                <p style="font-size:12px;color:#6b7280;margin-top:4px">13/07/2026 10:23</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
