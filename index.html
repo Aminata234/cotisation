@@ -3,36 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion Cotisations ODC</title>
+    <title>Connexion - Cotisations ODC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">Cotisations ODC</div>
-        <div class="nav-links">
-            <a href="auth.gerant.html">Gérant</a>
-            <a href="auth.coach.html">Coach</a>
-            <a href="auth.apprenant.html">Apprenant</a>
-        </div>
-    <div class="container-sm" style="text-align: center; padding-top: 80px;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgVDDya8SlJL4h9zhihJ2Rnhpz7sWgQP-wLNt_Qi1zA&s=10" alt="ODC" style="width: 120px; margin: 0 auto 24px;">
-        <h1 style="font-size: 36px; margin-bottom: 16px;">Plateforme de Gestion des Cotisations</h1>
-        <p style="font-size: 18px; color: #6b7280; margin-bottom: 40px;">
-            Suivez les cotisations hebdomadaires et ponctuelles de votre classe en toute transparence.
-        </p>
-        <div class="grid grid-3">
-            <a href="auth.gerant.html" class="card" style="text-decoration: none;">
-                <h3>Je suis Gérant</h3>
-                <p style="color: #6b7280; font-size: 14px;">Collecter, enregistrer, relancer</p>
-            </a>
-            <a href="auth.coach.html" class="card" style="text-decoration: none;">
-                <h3>Je suis Coach</h3>
-                <p style="color: #6b7280; font-size: 14px;">Superviser, auditer</p>
-            </a>
-            <a href="auth.apprenant.html" class="card" style="text-decoration: none;">
-                <h3>Je suis Apprenant</h3>
-                <p style="color: #6b7280; font-size: 14px;">Consulter mon solde</p>
-            </a>
+    <div class="auth-wrap">
+        <div class="auth-card">
+           
+            <div class="container-sm" style="text-align: center; padding-top: 80px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgVDDya8SlJL4h9zhihJ2Rnhpz7sWgQP-wLNt_Qi1zA&s=10" alt="ODC" style="width: 100px; margin: 0 auto 24px;">
+            </div>
+
+            <h1>Connexion</h1>
+            <form>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required placeholder="user@odc.sn">
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input type="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Se connecter</button>
+            </form>
+            
+            <p style="text-align:center;margin-top:24px;font-size:14px;color:#6b7280">
+                Pas encore de compte ? <a href="inscription.html" class="btn-link">S'inscrire</a>
+            </p>
         </div>
     </div>
 </body>
