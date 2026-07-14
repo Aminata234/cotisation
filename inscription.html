@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -34,5 +34,135 @@
             </p>
         </div>
     </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Cotisations ODC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-wrap">
+        <div class="auth-card">
+            <h1>Créer un compte</h1>
+            <p style="text-align:center;color:#6b7280;margin-bottom:24px">Rejoignez la plateforme</p>
+            
+            <form id="formInscription">
+                <div class="form-group">
+                    <label>Je suis</label>
+                    <select id="role" required onchange="toggleChamps()">
+                        <option value="">Sélectionner votre rôle...</option>
+                        <option value="apprenant">Apprenant</option>
+                        <option value="coach">Coach</option>
+                        <option value="gerant">Gérant</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nom complet</label>
+                    <input type="text" id="nom" required placeholder="Awa Diop">
+                </div>
+                
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" required placeholder="awa@odc.sn">
+                </div>
+                
+                <div class="form-group">
+                    <label>Téléphone</label>
+                    <input type="tel" id="tel" required placeholder="77 123 45 67">
+                </div>
+                
+                <div class="form-group" id="bloc-classe">
+                    <label>Classe</label>
+                    <select id="classe" required>
+                        <option value="">Sélectionner...</option>
+                        <option>Dev Web/Mobile</option>
+                        <option>Data</option>
+                        <option>Hackeuse</option>
+                        <option>Ref Dig</option>
+                    </select>
+                </div>
+
+                <!-- Champs spécifiques Apprenant -->
+                <div class="form-group" id="bloc-matricule" style="display:none">
+                    <label>Matricule ODC</label>
+                    <input type="text" id="matricule" placeholder="ODC2026-001">
+                    <p class="form-hint">Fourni par votre gérant</p>
+                </div>
+
+                <!-- Champs spécifiques Gérant -->
+                <div class="form-group" id="bloc-code-gerant" style="display:none">
+                    <label>Code d'accès Gérant</label>
+                    <input type="text" id="codeGerant" placeholder="Code fourni par ODC">
+                    <p class="form-hint">Demandez le code à votre superviseur</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input type="password" id="password" required placeholder="••••••••" minlength="8">
+                    <p class="form-hint">Minimum 8 caractères</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Confirmer le mot de passe</label>
+                    <input type="password" id="passwordConfirm" required placeholder="••••••••">
+                </div>
+                
+                <button type="submit" class="btn btn-full">Créer mon compte</button>
+            </form>
+            
+            <p style="text-align:center;margin-top:24px;font-size:14px;color:#6b7280">
+                Déjà inscrit ? <a href="index.html" class="btn-link">Se connecter</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function toggleChamps() {
+            const role = document.getElementById('role').value;
+            document.getElementById('bloc-matricule').style.display = role === 'apprenant' ? 'block' : 'none';
+            document.getElementById('bloc-code-gerant').style.display = role === 'gerant' ? 'block' : 'none';
+            document.getElementById('matricule').required = role === 'apprenant';
+            document.getElementById('codeGerant').required = role === 'gerant';
+        }
+
+        document.getElementById('formInscription').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const role = document.getElementById('role').value;
+            const password = document.getElementById('password').value;
+            const passwordConfirm = document.getElementById('passwordConfirm').value;
+            
+            if (password !== passwordConfirm) {
+                alert('Les mots de passe ne correspondent pas');
+                return;
+            }
+            
+            // En HTML pur, on simule avec localStorage
+            const user = {
+                nom: document.getElementById('nom').value,
+                email: document.getElementById('email').value,
+                tel: document.getElementById('tel').value,
+                role: role,
+                classe: document.getElementById('classe').value,
+                password: password, // En vrai : JAMAIS stocker en clair
+                matricule: document.getElementById('matricule').value || null,
+                codeGerant: document.getElementById('codeGerant').value || null
+            };
+            
+            // Sauvegarde dans localStorage
+            let users = JSON.parse(localStorage.getItem('users') || '[]');
+            users.push(user);
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            alert('Compte créé avec succès ! Connectez-vous.');
+            window.location.href = 'index.html';
+        });
+    </script>
 </body>
 </html>

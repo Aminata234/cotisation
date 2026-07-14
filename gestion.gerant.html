@@ -66,5 +66,18 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('currentUser'));
+        if (!user) window.location.href = 'index.html';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.user').innerHTML = user.nom + ' | <a href="#" onclick="logout()" style="color: #dc2626;">Déconnexion</a>';
+        });
+        function logout() {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        }
+    </script>
+    
 </body>
 </html>
